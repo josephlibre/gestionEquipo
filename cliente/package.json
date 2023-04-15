@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "PROXY": "http://localhost:5000/"
+  "PROXY": "https://gestionequipo.onrender.com/"
 }
