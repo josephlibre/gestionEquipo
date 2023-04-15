@@ -1,0 +1,16 @@
+{
+    "name": "crud_modulo",
+    "version": "1.0.0",
+    "description": "Crud Gestion de Equipos",
+    "main": "./servidor/server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "cd ./server && node server.js"
+    },
+    "engines": {
+      "node": "16.x"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
