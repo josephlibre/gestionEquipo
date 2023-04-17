@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
+//
+const router = express.Router();
 
-
+const cors = require("cors");
+router.use(cors());
+//
 const dotenv = require('dotenv');
 
 //Importar conexión mongoDB
@@ -38,7 +42,7 @@ app.use('/api/inventario', rutainventario)
 
 
 
-console.log(process.env.HOLA);
+//console.log(process.env.HOLA);
 
 
 app.get('/', (req, res) => {
