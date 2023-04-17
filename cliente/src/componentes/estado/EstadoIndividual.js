@@ -16,7 +16,7 @@ function EstadoIndividual({estado}){
 
     //Función para borrar estado
     function borrarestado(idestado){
-        axios.post('/api/estado/borrarestado', {idestado: idestado}).then(res => {
+        axios.post('https://gestionequipo.onrender.com/api/estado/borrarestado', {idestado: idestado}).then(res => {
             console.log(res.data) 
             alert(res.data)  
             navegar(0)

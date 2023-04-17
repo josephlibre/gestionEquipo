@@ -16,7 +16,7 @@ function EditarEstado(){
     
 
     useEffect(() => {
-       axios.post('/api/estado/obtenerdataestado', {idestado: params.idestado}).then(res => {
+       axios.post('https://gestionequipo.onrender.com/api/estado/obtenerdataestado', {idestado: params.idestado}).then(res => {
            console.log(res.data[0]) 
            const datausuario = res.data[0]
            setNombre(datausuario.nombre)
@@ -36,7 +36,7 @@ function EditarEstado(){
 
 
         //Hacer la petición usando axios
-        axios.post('/api/estado/actualizaestado', actualizarestado)
+        axios.post('https://gestionequipo.onrender.com/api/estado/actualizaestado', actualizarestado)
         .then(res => {
             console.log(res.data)
             alert(res.data)

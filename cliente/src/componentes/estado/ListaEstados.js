@@ -6,7 +6,7 @@ function ListaEstados(){
     const[dataestados, setdataestado]=useState([])
 
     useEffect(() => {
-        axios.get('api/estado/obtenerestados').then(res => {
+        axios.get('https://gestionequipo.onrender.com/api/estado/obtenerestados').then(res => {
             console.log(res.data)  
             setdataestado(res.data)          
         }).catch(err => {

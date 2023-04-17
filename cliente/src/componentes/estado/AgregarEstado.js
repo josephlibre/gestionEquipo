@@ -20,7 +20,7 @@ function AgregarEstado(){
         }
         console.log(estados)
 
-        axios.post('/api/estado/agregarestado', estados)
+        axios.post('https://gestionequipo.onrender.com/api/estado/agregarestado', estados)
         .then(res => {
             //alert(res.data)
             Swal.fire('Felicidades', 'El registro se creó con éxito')
