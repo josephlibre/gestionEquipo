@@ -1,9 +1,14 @@
 const mongoose = require('mongoose');
-//mongoose.connect('mongodb://127.0.0.1:27017/crud');
 
-mongoose.connect('mongodb+srv://admin:nwqVYCL0WZNX59v4@cluster0.qihhlsg.mongodb.net/crud?retryWrites=true&w=majority');
+const dotenv = require('dotenv');
+dotenv.config();
 
+mongoose.connect(process.env.MONGO_URI)
 const objetobd = mongoose.connection
+
+//console.log(process.env.MONGO_URI);
+
+
 
 objetobd.on('connected', ()=>{console.log('Conexión correcta a MongoDB')})
 objetobd.on('error', ()=>{console.log('Error en la conexión a MongoDB')})

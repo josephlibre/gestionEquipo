@@ -1,8 +1,13 @@
 const express = require('express')
 const app = express()
 
+
+const dotenv = require('dotenv');
+
 //Importar conexión mongoDB
 const archivoBD = require('./conexion')
+
+dotenv.config();
 
 //Importación del archivo de rutas y modelos
 
@@ -33,13 +38,15 @@ app.use('/api/inventario', rutainventario)
 
 
 
+console.log(process.env.HOLA);
+
 
 app.get('/', (req, res) => {
     res.end('Bienvenidos al servidor backend Node.js. Corriendo...')
 })
 
-
+const PORT = process.env.PORT || 5000;
 //Configurar server básico
-app.listen(5000, function(){
-    console.log('El servidor NODE está corriendo correctamente')
+app.listen(PORT, function(){
+    console.log(`El servidor NODE está corriendo correctamente en el puerto ${PORT}`)
 })

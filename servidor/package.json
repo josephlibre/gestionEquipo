@@ -1,5 +1,5 @@
 {
-  "name": "crud_mern_stack",
+  "name": "crud_modulo",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "mongoose": "^6.1.1",
     "nodemon": "^2.0.15"
