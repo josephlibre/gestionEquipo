@@ -3,7 +3,12 @@ const router = express.Router()
 
 const mongo=require("mongoose");
 
+//
 
+const cors = require("cors");
+router.use(cors());
+
+//
 
 
 const tipoSchema=mongo.Schema(

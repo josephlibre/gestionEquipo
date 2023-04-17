@@ -4,6 +4,14 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const eschema = mongoose.Schema
 
+//
+
+const cors = require("cors");
+router.use(cors());
+
+//
+
+
 const eschemausuario = new eschema({
     nombre: String,
     email: String,
