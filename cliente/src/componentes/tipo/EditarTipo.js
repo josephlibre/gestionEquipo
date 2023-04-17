@@ -16,7 +16,7 @@ function EditarTipo(){
     
 
     useEffect(() => {
-       axios.post('/api/tipo/obtenerdatatipo', {idtipo: params.idtipo}).then(res => {
+       axios.post('https://gestionequipo.onrender.com/api/tipo/obtenerdatatipo', {idtipo: params.idtipo}).then(res => {
            console.log(res.data[0]) 
            const datatipo = res.data[0]
            setNombre(datatipo.nombre)
@@ -36,7 +36,7 @@ function EditarTipo(){
 
 
         //Hacer la petición usando axios
-        axios.post('/api/tipo/actualizatipo', actualizartipo)
+        axios.post('https://gestionequipo.onrender.com/api/tipo/actualizatipo', actualizartipo)
         .then(res => {
             console.log(res.data)
             alert(res.data)

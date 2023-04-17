@@ -16,7 +16,7 @@ function TipoIndividual({tipo}){
 
     //Función para borrar estado
     function borrarestado(idtipo){
-        axios.post('/api/tipo/borrartipo', {idtipo: idtipo}).then(res => {
+        axios.post('https://gestionequipo.onrender.com/api/tipo/borrartipo', {idtipo: idtipo}).then(res => {
             console.log(res.data) 
             alert(res.data)  
             navegar(0)

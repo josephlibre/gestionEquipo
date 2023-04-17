@@ -7,7 +7,7 @@ function ListaTipos(){
     const[datatipos, setdatatipo]=useState([])
 
     useEffect(() => {
-        axios.get('api/tipo/obtenertipos').then(res => {
+        axios.get('https://gestionequipo.onrender.com/api/tipo/obtenertipos').then(res => {
             console.log(res.data)  
             setdatatipo(res.data)          
         }).catch(err => {
